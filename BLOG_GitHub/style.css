@@ -1,0 +1,191 @@
+
+/** {
+  box-sizing: border-box;
+}*/
+
+/*这一次作业感觉时间非常紧张（因为平时要上班，又出差了一段时间，所以时间有点安排不过来），
+加上中间还错过了几次班会（希望班会以后可以回放），心里有点急但是又有点不知所措。
+做作业过程中感觉有很多东西都需要边查边写，这次解决了，下一次用到又忘记，感觉还是需要多练才能记得比较熟悉*/
+
+body{
+    /*background-image: url(http://coding.imweb.io/img/project/blog/bg.jpg);
+    background-position:bottom right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+    background: url(http://coding.imweb.io/img/project/blog/bg.jpg) bottom right no-repeat fixed;
+
+
+}
+
+/*整体宽度650px 左外边距50px*/
+.page-detail{
+    width: 650px;
+    margin-left: 50px;
+}
+
+/*字号36px，行高两倍，上下margin 30px*/
+.page-tt{
+    font-size: 36px;
+    line-height: 2em;  /* 2 倍行高*/
+    margin: 30px 0;
+    color: #188eee;
+}
+
+/*字号24px，行高两倍，margin上下20px，下划线用linear-gradient*/
+.article h2{
+    font-size: 24px;
+    line-height: 2em;
+    margin: 20px 0;
+    background-size: 100% 1px;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #188eee 15%, #999 15%, #999 100%);
+    /*background: linear-gradient(to right, #188eee 15%, #999 15%, #999 100%) 100% 1px no-repeat;*/
+}
+
+/*序号counter reset*/
+.article ol{
+    counter-reset: scheduleOrder;
+}
+
+/*序号字体为 monospace， 颜色#999， 右边margin 10px*/
+.article ol li:before{
+    counter-increment: scheduleOrder;
+    content: counter(scheduleOrder, decimal-leading-zero) "/";
+    font-family: monospace;
+    font-style: italic;
+    color: #999;
+    margin-right: 10px;
+}
+
+/*段落文本16px， 行高1.8倍字号，首行缩进2字符， 上下间距10px*/
+.article p, .ps{
+    font-size: 16px;
+    line-height: 1.8em;
+   /* padding-top: 5px;
+    padding-bottom: 5px;*/
+    margin: 10px 0 20px 0;
+    text-indent: 2em;
+}
+
+/*边框1px， #999， 图片上下间距10px*/
+.article img{
+    border: 1px solid #999;
+    padding: 5px;
+    margin: 5px;
+}
+
+.ps{
+   color: #999;
+}
+
+.ps a{
+    color: #333;
+}
+
+/*划过字体颜色#188eee*/
+.ps a:hover{
+    color: #188eee;
+}
+
+/*评论区上margin 50px， 上面border 3px， #188eee， 上padding 30px*/
+.section-comment{
+    margin-top: 50px;
+    border-top: 3px solid #188eee;
+    padding-top: 30px;
+}
+
+.form--comment{
+    margin: 20px 0;
+}
+
+/*评论区默认边框颜色#dbdbdb， 圆角5px， padding 5px*/
+.f-textarea{
+    padding: 5px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    width: 100%;
+    height: 100px;
+}
+
+/*评论区划过阴影， border #ccc*/
+.f-textarea:hover{
+    border-color: #ccc;
+    /*box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+/*按钮*/
+.f-btn{
+    /*background-color: #188eee;*/
+    color: white;
+    margin: 10px 0 10px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #188eee;
+}
+
+/*按钮划过颜色 #188eee*/
+.f-btn:hover{
+    /*color: white;*/
+    background-color: #147de2;
+}
+
+/*评论列表与按钮间距 10+10 = 20*/
+.comment-list{
+    margin-top: 10px;
+}
+
+/*评论点赞、回复靠右*/
+.comment-ft{
+    text-align: right;
+}
+
+/*评论列表*/
+.comment-item{
+    padding: 5px;
+    margin: 10px 0;
+    /*background: 100% #f5f5f5 repeat;*/
+    background: #f5f5f5;
+    font-size: 12px;
+}
+
+/*评论列表划过*/
+.comment-item:hover{
+    /*box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+}
+
+/*评论列表评论内容*/
+.comment-item p{
+    font-size: 14px;
+}
+
+/*评论时间*/
+.item-time{
+    color: #666;
+    margin-right: 5px;
+}
+
+/*评论列表按钮： 用户，点赞，回复*/
+.item-user, .ft-oper{
+    color: #666;
+    margin-left: 5px;
+}
+
+/*评论用户*/
+.item-user{
+    color: #147de2;
+}
+
+/*评论列表按钮划过： 用户，点赞，回复*/
+.item-user:hover, .ft-oper:hover{
+    color: #147de2;
+}
+
+/*点赞，回复 鼠标移入样式*/
+.ft-oper{
+    cursor: pointer;
+}
+
